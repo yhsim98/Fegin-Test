@@ -16,7 +16,7 @@ spec: # 3가지 필수 구성요서중 하나 specification, 나머지 하나는
         app: a # 파드는 .metadata.labels 필드를 사용 app: nginx 라는 레이블을 붙인다.
     spec:
       containers:
-        - name: hello # 컨테이너 1개를 생성, .spec.template.spec.containers[0].name 필드를 사용해서 nginx 라는 이름을 붙인다.
+        - name: a # 컨테이너 1개를 생성, .spec.template.spec.containers[0].name 필드를 사용해서 nginx 라는 이름을 붙인다.
           image: 884868906286.dkr.ecr.ap-northeast-2.amazonaws.com/test2:latest # 파드가 도커 허브의 nginx 1.14.2 버전 이미지를 실행하는 nginx 컨테이너 1개를 실행하는 것을 나타낸다.
           imagePullPolicy: Always
           ports:
