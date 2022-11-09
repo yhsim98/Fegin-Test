@@ -1,0 +1,38 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.5'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+bootJar {
+    archivesBaseName = 'ROOT'
+    archiveFileName = 'ROOT.jar'
+    archiveVersion = "0.0.1"
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+
+    // https://spring.io/projects/spring-cloud 의 Release Trains 부분을 보세요.
+    springCloudVersion = 'Finchley.RELEASE'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
