@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: # 3가지 필수 구성요소중 하나
-  name: hello-deploy # 해당 이름으로 디플로이 먼트가 생성됨.
-  namespace: hello
+  name: a # 해당 이름으로 디플로이 먼트가 생성됨.
+  namespace: a
   labels:
-    app: hello
+    app: a
 spec: # 3가지 필수 구성요서중 하나 specification, 나머지 하나는 status
   replicas: 2 # 3개의 리플리카 pod를 생성한다.
   selector: # 디플로이먼트가 관리할 파드를 찾는 방법을 정의, matchLabels이 nginx인 파드를 디플로이먼트가 관리한다.
