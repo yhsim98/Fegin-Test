@@ -13,8 +13,6 @@ public class AService {
     private BClient bClient;
 
     public Map<String, String> getB() {
-        Map<String, String> map = new HashMap<>();
-        map.put("return b", bClient.getB());
-        return map;
+        return bClient.getB();
     }
 }
