@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
-@RestController("A")
+@RestController("/A")
 public class AController {
 
     @Autowired
     private AService aService;
 
-    @GetMapping("/")
+    @GetMapping("")
     public String returnA() {
         return "A";
     }
